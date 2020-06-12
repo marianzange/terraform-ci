@@ -2,7 +2,7 @@ FROM hashicorp/terraform:0.12.26
 
 RUN apk add --update --no-cache \
   make \
-  jq \
+  ncurses \
   python3 \
   && pip3 install checkov --no-cache-dir checkov \
   && wget https://github.com/instrumenta/conftest/releases/download/v0.17.1/conftest_0.17.1_Linux_x86_64.tar.gz \
