@@ -2,6 +2,8 @@ FROM hashicorp/terraform:0.12.26
 
 RUN apk add --update --no-cache \
   make \
+  jq \
+  bash \
   ncurses \
   python3 \
   && pip3 install checkov --no-cache-dir checkov \
