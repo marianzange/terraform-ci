@@ -3,6 +3,7 @@ FROM hashicorp/terraform:0.12.26
 RUN apk add --update --no-cache \
   make \
   jq \
+  curl \
   bash \
   ncurses \
   python3 \
