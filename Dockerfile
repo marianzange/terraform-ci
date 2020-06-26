@@ -7,8 +7,9 @@ RUN apk add --update --no-cache \
   bash \
   ncurses \
   python3 \
-  && pip3 install checkov --no-cache-dir checkov \
-  && wget https://github.com/instrumenta/conftest/releases/download/v0.17.1/conftest_0.17.1_Linux_x86_64.tar.gz \
-  && tar xzf conftest_0.17.1_Linux_x86_64.tar.gz \
+  py3-pip \
+  && pip install checkov --ignore-installed six --no-cache-dir checkov \
+  && wget https://github.com/open-policy-agent/conftest/releases/download/v0.19.0/conftest_0.19.0_Linux_x86_64.tar.gz \
+  && tar xzf conftest_0.19.0_Linux_x86_64.tar.gz \
   && mv conftest /usr/local/bin \
-  && rm conftest_0.17.1_Linux_x86_64.tar.gz
+  && rm conftest_0.19.0_Linux_x86_64.tar.gz
