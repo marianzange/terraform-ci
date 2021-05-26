@@ -17,7 +17,7 @@ RUN apk add --update --no-cache \
   && pip install checkov==1.0.624 --ignore-installed six --no-cache-dir --no-build-isolation \
   && wget https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip \
   && unzip awscli-exe-linux-x86_64.zip \
-  && ./aws/install \
+  && ./aws/install -i /usr/local/aws-cli -b /usr/local/bin \
   && rm awscli-exe-linux-x86_64.zip \
   && wget https://github.com/open-policy-agent/conftest/releases/download/v0.21.0/conftest_0.21.0_Linux_x86_64.tar.gz \
   && tar xzf conftest_0.21.0_Linux_x86_64.tar.gz \
