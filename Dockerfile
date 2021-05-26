@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:0.14.4
+FROM hashicorp/terraform:0.14.6
 
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 ENV PIP_NO_CACHE_DIR=1
